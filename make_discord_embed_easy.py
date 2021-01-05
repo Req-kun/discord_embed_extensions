@@ -1,16 +1,17 @@
 import discord
 
-def make(*, title:str=None, description:str=None, url:str=None, color:int=None, footer:dict=None, image:str=None, thumbnail:str=None, author:dict=None, fields:list=None):
+
+def make(*, title: str = None, description: str = None, url: str = None, color: int = None, footer: dict = None, image: str = None, thumbnail: str = None, author: dict = None, fields: list = None):
     embed = discord.Embed()
-    if title != None:
+    if title is not None:
         embed.title = title
-    if description != None:
+    if description is not None:
         embed.description = description
-    if url != None:
+    if url is not None:
         embed.url = url
-    if color != None:
+    if color is not None:
         embed.colour = color
-    if footer != None:
+    if footer is not None:
         '''
         footer = {'text': 'text', 'icon_url': 'icon_url'}
         '''
@@ -20,11 +21,11 @@ def make(*, title:str=None, description:str=None, url:str=None, color:int=None, 
             embed.set_footer(icon_url=footer['icon_url'])
         if 'text' in footer.keys() and 'icon_url' not in footer.keys():
             embed.set_footer(text=footer['text'])
-    if image != None:
+    if image is not None:
         embed.set_image(url=image)
-    if thumbnail != None:
+    if thumbnail is not None:
         embed.set_thumbnail(url=thumbnail)
-    if author != None:
+    if author is not None:
         '''
         author = {'name': 'name', 'url': 'url', 'icon_url': 'icon_url'}
         '''
@@ -49,7 +50,7 @@ def make(*, title:str=None, description:str=None, url:str=None, color:int=None, 
         # url
         if 'name' not in author.keys() and 'url' in author.keys() and 'icon_url' not in author.keys():
             embed.set_author(url=author['url'])
-    if fields != None:
+    if fields is not None:
         '''
         fields = [{'name': 'name', 'value': 'value', 'inline': True / False}, {'name': 'name', 'value': 'value', 'inline': True / False}]
         '''
@@ -76,8 +77,8 @@ def make(*, title:str=None, description:str=None, url:str=None, color:int=None, 
             if 'name' not in f.keys() and 'value' in f.keys() and 'inline' in f.keys():
                 embed.add_field(value=f['value'], inline=f['inline'])
 
-
     return embed
+
 
 '''Example
 
