@@ -70,7 +70,7 @@ footer=footer_dict(
 '''
 
 
-# 送信者のせて地をする際のdictを分かりやすく定義するための関数
+# 送信者の設定をする際のdictを分かりやすく定義するための関数
 # 返り値：dict
 def author_dict(*, name: str = None, url: str = None, icon_url: str = None):
     # author_dict(name='author name', url='author url', icon_url='author icon url')
