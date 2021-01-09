@@ -1,5 +1,16 @@
-※適当に作ったモジュールのため、バグが発生する可能性があります。もしバグが発生した場合、Discord(Req van Astraea#9732)もしくはTwitter(@Req_fn)までご連絡ください。※  
-※バグが完全にないと判断され、要望があればパッケージ化するかもしれません※
+※適当に作ったモジュールのため、バグが発生する可能性があります。もしバグが発生した場合、Discord(Req van Astraea#9732)もしくはTwitter(@Req_fn)までご連絡ください。※
+
+# install
+
+```
+pip install discord-embed-extensions
+```
+
+# import
+
+```
+import discord_embed_extensions
+```
 
 # 追加されるもの
 ## 追加される関数
